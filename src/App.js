@@ -6,6 +6,8 @@ import Routes from 'react-static-routes'
 
 import './app.css'
 
+import Footer from 'components/Footer'
+
 const App = () => (
   <Router>
     <div>
@@ -17,6 +19,7 @@ const App = () => (
       <div className="content">
         <Routes />
       </div>
+      <Footer></Footer>
     </div>
   </Router>
 )
