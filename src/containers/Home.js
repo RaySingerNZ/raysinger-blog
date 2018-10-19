@@ -63,11 +63,11 @@ const layoutLeft = css`
 
 const layoutCenter = css`
   .left {
-    padding: 0 20px;
+    padding: 0 20px 100px;
     flex: 2 1 200px;
   }
   .right {
-    padding: 0 20px;
+    padding: 0 20px 100px;
     flex: 2 1 200px;
   }
 `
