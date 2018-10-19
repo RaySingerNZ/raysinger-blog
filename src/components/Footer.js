@@ -5,9 +5,8 @@ import styled from 'styled-components'
 import Theme from 'utils/Theme'
 
 const FooterStyles = styled.div`
-  position: fixed;
+  position: absolute;
   left: 0;
-  bottom: 0;
   width: 100%;
   z-index: 1;
   padding: 20px;

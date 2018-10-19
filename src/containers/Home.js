@@ -2,8 +2,6 @@ import React from 'react'
 import { withSiteData } from 'react-static'
 import styled, { css } from 'styled-components'
 
-
-
 import Color from 'utils/Color'
 import Theme from 'utils/Theme'
 import { angle } from 'utils/Styles'
@@ -11,11 +9,14 @@ import { angle } from 'utils/Styles'
 import Link from 'components/Link'
 import NodeGarden from 'components/NodeGarden'
 import { H1, H2, H3, H4, H5, H6, P, Ul, Li, Img, Div, Button, Strong } from 'components/Html'
-import GithubIcon from 'components/GithubIcon'
+import ProfileIcon from 'components/svg/ProfileIcon'
+import BlogIcon from 'components/svg/BlogIcon'
+import TwitterIcon from 'components/svg/TwitterIcon'
+import LinkedInIcon from 'components/svg/LinkedInIcon'
+
 
 const belowMobile = `@media(max-width: ${700}px)`
 const belowTablet = `@media(max-width: ${1000}px)`
-
 
 const Left = props => <div className="left" {...props} />
 const Right = props => <div className="right" {...props} />
@@ -60,7 +61,7 @@ const layoutLeft = css`
   }
 `
 
-const layoutRight = css`
+const layoutCenter = css`
   .left {
     flex: 2 1 200px;
   }
@@ -111,14 +112,30 @@ const NodeGardenWrapper = styled(Section)`
     color: ${Theme.colors.primaryLighter};
     margin-top: -10px;
   }
-
 `
 
-const SocialMediaLinks = styled(Section)`
+const SocialMediaLinksRight = styled(Section)`
   ${section} 
   ${layoutDark} 
-  ${layoutRight} 
+  ${layoutCenter} 
   ${angle('right')} 
+  position: relative;
+  padding-top: 5rem;
+  .right {
+    z-index: 0;
+  }
+  .inner {
+    padding: 2% 10%;
+  }
+`
+
+const SocialMediaLinksLeft = styled(Section)`
+  ${section} 
+
+  ${layoutCenter} 
+  ${angle('left')}
+  padding-top: 5rem; 
+  padding-bottom: 5rem; 
   position: relative;
   .right {
     z-index: 0;
@@ -139,99 +156,79 @@ export default withSiteData(() => (
         <H1>Kia Ora</H1>
         <P>My name is Ray Singer. Welcome to my personal website and blog.</P>
         <P> 
-          Here you'll find topics related to software development, dev-ops, design-thinking, sonic arts, study-advice and more. 
-          Basically I write about things I'm into, and well... I'm into a heap of different stuff!
+          Here you'll find topics related to software development, from dev-ops to design-thinking. 
+          I'm a full-stack developer with a background in design. I write about things I'm into, and well... I'm into a heap of different stuff!
         </P>
         <P>
           I work with the team of clever and fun people at <a href="https://stp.co.nz/">Stratos Technology Partners</a> where we create software applications that make difficult problems simple.
         </P>
         <P>
-          During my spare time I do battle on the table tennis court with my colleagues, perform music at festivals throughout Australisia and go on surf/kite/wakeboard trips with my family. 
+          During my spare time I battle-it-out on the tabletennis court with my colleagues, perform music at festivals throughout Australisia and go on surf/kite/wakeboard trips with my family. 
         </P>
       </Right>
       
     </NodeGardenWrapper>
 
-    <SocialMediaLinks>
+    <SocialMediaLinksRight>
       <Left>
-        <GithubIcon></GithubIcon>
+        <BlogIcon></BlogIcon>
         <br />
         <br />
-        <H2>Skills</H2>
+        <H2>Blog</H2>
         <P>
-          Placeholder for some info. Placeholder for some info. Placeholder for some info. Placeholder for some info.
+          Tips, tricks, insight, banter and fun. They say you never really understand something until you can explain it.  
         </P>
-        {/* <Link to="/#contact">
-          <Button color="success" burst>
-            Some Text
-          </Button>
-        </Link>{' '}
-        <Link to="/features">
+        <Link to="/blog">
           <Button color="primary" burst>
-            More Text
+            Browse Topics
           </Button>
-        </Link> */}
+        </Link>
       </Left>
       <Right>
-        <GithubIcon></GithubIcon>
+        <ProfileIcon></ProfileIcon>
         <br />
         <br />
-        <H2>Skills</H2>
+        <H2>About</H2>
         <P>
-          Placeholder for some info. Placeholder for some info. Placeholder for some info. Placeholder for some info.
+          Who, what, why, when? More about my journey from designer to developer and beyond.
         </P>
-        {/* <Link to="/#contact">
+        <Link to="/about">
           <Button color="success" burst>
-            Some Text
+            Read More
           </Button>
-        </Link>{' '}
-        <Link to="/features">
-          <Button color="primary" burst>
-            More Text
-          </Button>
-        </Link> */}
+        </Link>
       </Right>
-    </SocialMediaLinks>
-    <SocialMediaLinks>
+    </SocialMediaLinksRight>
+    <SocialMediaLinksLeft>
       <Left>
-        <GithubIcon></GithubIcon>
+        <TwitterIcon></TwitterIcon>
         <br />
         <br />
-        <H2>Skills</H2>
+        <H2>Twitter</H2>
         <P>
-          Placeholder for some info. Placeholder for some info. Placeholder for some info. Placeholder for some info.
+          I don't tweet often but when I do it's usually to announce that I have published a new blog article.
         </P>
-        {/* <Link to="/#contact">
-          <Button color="success" burst>
-            Some Text
-          </Button>
-        </Link>{' '}
-        <Link to="/features">
+        <Link to="https://twitter.com/raysingernz">
           <Button color="primary" burst>
-            More Text
+            Let's Tweet
           </Button>
-        </Link> */}
+        </Link>
       </Left>
       <Right>
-        <GithubIcon></GithubIcon>
+        <LinkedInIcon></LinkedInIcon>
         <br />
         <br />
-        <H2>Skills</H2>
+        <H2>LinkedIn</H2>
         <P>
-          Placeholder for some info. Placeholder for some info. Placeholder for some info. Placeholder for some info.
+          LinkedIn is currently my abandoned CV. Note to self: keep it up-to-date with interesting content.
         </P>
-        {/* <Link to="/#contact">
+        <Link to="https://www.linkedin.com/in/ray-singer-38710780">
           <Button color="success" burst>
-            Some Text
+            Let's Link Up
           </Button>
-        </Link>{' '}
-        <Link to="/features">
-          <Button color="primary" burst>
-            More Text
-          </Button>
-        </Link> */}
+        </Link>
       </Right>
-    </SocialMediaLinks>
+    </SocialMediaLinksLeft>
     
   </div>
 ))
