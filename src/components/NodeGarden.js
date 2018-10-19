@@ -42,7 +42,7 @@ class NodeGarden extends PureComponent {
     this.nodes = []
     for (let i = 0; i < this.NUM_NODES; i += 1) {
       const node = {
-        radius: Math.round(Math.random() * 4) + 1,
+        radius: Math.round(Math.random() * 10) + 1,
         x: Math.round(Math.random() * width),
         y: Math.round(Math.random() * height),
         vx: Math.random() * 6 - 3,
@@ -72,7 +72,7 @@ class NodeGarden extends PureComponent {
       this.nodes.push(node)
     }
 
-    this.canvasContext.lineWidth = 1.5
+    this.canvasContext.lineWidth = 5.5
 
     if (!this.animating) {
       raf(this.animate)
