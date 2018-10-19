@@ -7,14 +7,12 @@ import Theme from 'utils/Theme'
 const FooterStyles = styled.div`
   position: absolute;
   left: 0;
-  width: 100%;
   z-index: 1;
   padding: 20px;
-  background: ${Theme.colors.primary};
-  color: white;
-  box-shadow: 0 -10px 20px -10px rgba(0, 0, 0, .3);
+  color: ${Theme.colors.primaryDarkest};
   .copyright {
     text-align: center;
+    font-weight: bold;
   }
 `
 

@@ -54,7 +54,7 @@ const layoutLeft = css`
   .left {
     flex: 2 1 200px;
     text-align: right;
-    margin-right: 40px;
+    padding-right: 50px;
   }
   .right {
     flex: 7 1 300px;
@@ -63,10 +63,11 @@ const layoutLeft = css`
 
 const layoutCenter = css`
   .left {
+    padding: 0 20px;
     flex: 2 1 200px;
   }
   .right {
-    margin-left: 40px;
+    padding: 0 20px;
     flex: 2 1 200px;
   }
 `
@@ -179,7 +180,7 @@ export default withSiteData(() => (
           Tips, tricks, insight, banter and fun. They say you never really understand something until you can explain it.  
         </P>
         <Link to="/blog">
-          <Button color="primary" burst>
+          <Button color="success" burst>
             Browse Topics
           </Button>
         </Link>
@@ -209,7 +210,7 @@ export default withSiteData(() => (
           I don't tweet often but when I do it's usually to announce that I have published a new blog article.
         </P>
         <Link to="https://twitter.com/raysingernz">
-          <Button color="primary" burst>
+          <Button color="success" burst>
             Let's Tweet
           </Button>
         </Link>

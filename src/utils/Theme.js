@@ -1,6 +1,6 @@
 import Color from './Color'
 
-const primary = '#0C6A8A'
+const primary = '#05af82'
 
 const colorOptions = {
   primary,
@@ -22,7 +22,7 @@ const colorOptions = {
     .toString(),
   text: '#2b3640',
   danger: '#F15854',
-  success: '#60BD68',
+  success: '#B93F34',
   warning: '#e4b000',
   white: 'white',
   stable: Color.mix(primary, 'black', 40).toString(),
