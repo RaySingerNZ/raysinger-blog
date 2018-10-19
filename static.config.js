@@ -44,7 +44,7 @@ function getPosts () {
 export default {
 
   getSiteData: () => ({
-    title: 'React Static with Netlify CMS',
+    title: 'Ray Singer\'s Blog',
   }),
   getRoutes: async () => {
     const posts = await getPosts()
