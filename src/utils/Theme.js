@@ -1,6 +1,6 @@
 import Color from './Color'
 
-const primary = '#05af82'
+const primary = '#319AE2'
 
 const colorOptions = {
   primary,
@@ -20,10 +20,14 @@ const colorOptions = {
     .darken(20)
     .saturate(100)
     .toString(),
+  primaryAlmostBlack: Color(primary)
+    .darken(40)
+    .saturate(50)
+    .toString(),
   text: '#2b3640',
-  danger: '#F15854',
-  success: '#B93F34',
-  warning: '#e4b000',
+  danger: '#E2561D',
+  success: '#AF1614',
+  warning: '#E29A31',
   white: 'white',
   stable: Color.mix(primary, 'black', 40).toString(),
   lighter: 'rgba(255, 255, 255, 0.8)',

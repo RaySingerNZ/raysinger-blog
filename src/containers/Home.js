@@ -106,7 +106,6 @@ const NodeGardenWrapper = styled(Section)`
   .circle-img {
     border-radius: 50%;
     max-height: 350px;
-
   };
   color: white;
   h1 {
@@ -132,7 +131,6 @@ const SocialMediaLinksRight = styled(Section)`
 
 const SocialMediaLinksLeft = styled(Section)`
   ${section} 
-
   ${layoutCenter} 
   ${angle('left')}
   padding-top: 5rem; 
