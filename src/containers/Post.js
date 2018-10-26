@@ -117,22 +117,20 @@ export default withRouteData(({ post }) => (
   <BlogNodeGardenWrapper>
     <NodeGarden color={Color('white').setAlpha(0.1).toString()} style={{ position: 'absolute', top: '0px', left: '0px', zIndex: -1 }}></NodeGarden>
     <Right>
-    <Link to="/blog/">{'<'} Back</Link>
-    <br />
-    <H3>{post.data.title}</H3>
-      </Right> 
+      <H3>{post.data.title}</H3>
+      <Link to="/blog/"><H4>{'<'} Back</H4></Link>
+    </Right> 
   </BlogNodeGardenWrapper>
   <BlogPostsWrapper>
     <Left>
-    <Moment format="MMMM Do, YYYY">{post.data.date}</Moment>
-    <br />
-    <img className="image" src={post.data.thumbnail} alt="" />
-    <br />
-    <Div className="markdown">
-    <Markdown source={post.content} escapeHtml={false} />
-    </Div>
+      <Moment format="MMMM Do, YYYY">{post.data.date}</Moment>
+      <hr />
+      <Img className="image" src={post.data.thumbnail} alt="" />
+      <br />
+      <Div className="markdown">
+        <Markdown source={post.content} escapeHtml={false} />
+      </Div>
     </Left>
   </BlogPostsWrapper>
-    
   </div>
 ))

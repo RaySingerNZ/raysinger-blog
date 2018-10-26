@@ -117,7 +117,7 @@ export const P = styled.p`
   ${margin};
   ${color};
   ${weight};
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   line-height: 1.6rem;
 `
 

@@ -8,7 +8,7 @@ import Theme from 'utils/Theme'
 import NodeGarden from 'components/NodeGarden'
 import { H1, H2, H3, H4, H5, H6, P, Ul, Li, Img, Div, Button, Strong } from 'components/Html'
 
-
+const belowMobile = `@media(max-width: ${700}px)`
 const Left = props => <div className="left" {...props} />
 const Right = props => <div className="right" {...props} />
 
@@ -53,7 +53,7 @@ const layoutCenter = css`
 `
 
 const layoutDark = css`
-  background: ${Theme.colors.primaryAlmostBlack};
+  background: ${Theme.colors.primaryDarker};
   color: white;
 `
 
@@ -94,6 +94,46 @@ const BlogPostsWrapper = styled(Section)`
   }
 `
 
+const IndividualPostWrapper = styled.section`
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -moz-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0 0 2em 0;
+
+  article {
+    padding: 1.75em;
+    background-color: ${Theme.colors.primaryAlmostBlack};
+    border-radius: 5px;
+    margin: 1.5em;
+    width: calc(40% - 1.5em);
+  }
+
+  article .image {
+    border-radius: 5px 5px 0 0;
+    display: block;
+    margin-bottom: 1.75em;
+    position: relative;
+    width: calc(100% + 3.5em);
+  }
+
+  article .image img {
+    border-radius: 5px 5px 0 0;
+    width: 100%;
+  }
+
+  @media screen and (max-width: 1067px) {
+     article {
+      margin: 1em 1em 2em 1em;
+      width: calc(90% - 1em);
+    }
+  }
+`
+
 const BlogBelowPosts = styled(Section)`
   ${section}
   position: relative;
@@ -118,13 +158,15 @@ export default withRouteData(({ posts }) => (
     <BlogPostsWrapper>
       <Left>
         <H2>All Posts:</H2>
-        <ul>
-          {posts.map(post => (
-            <li key={post.data.slug}>
-              <Link to={`/blog/post/${post.data.slug}`}>{post.data.title}</Link>
-            </li>
+        <IndividualPostWrapper>
+        {posts.map(post => (
+            <article key={post.data.slug}>
+              <div><Link to={`/blog/post/${post.data.slug}`}><img className="image" src={post.data.thumbnail} alt="" /></Link></div>     
+              <div><Link to={`/blog/post/${post.data.slug}`}><H4>{post.data.title}</H4></Link></div>
+              <div><P>{post.data.blurb}</P></div>       
+            </article>
           ))}
-        </ul>
+      </IndividualPostWrapper>
       </Left>  
     </BlogPostsWrapper>
     <BlogBelowPosts>
