@@ -9,6 +9,8 @@ import NodeGarden from 'components/NodeGarden'
 import { H1, H2, H3, H4, H5, H6, P, Ul, Li, Img, Div, Button, Strong } from 'components/Html'
 
 const belowMobile = `@media(max-width: ${700}px)`
+const belowTablet = `@media(max-width: ${1000}px)`
+
 const Left = props => <div className="left" {...props} />
 const Right = props => <div className="right" {...props} />
 
@@ -28,6 +30,17 @@ const section = css`
     flex-wrap: wrap;
     align-items: center;
   }
+  ${belowMobile} {
+    .left,
+    .right {
+      flex: 1 1 100%;
+      margin-left: 0;
+      margin-right: 0;
+    }
+    .left {
+      margin-bottom: 2rem;
+    }
+  }
 `
 
 const layoutLeft = css`
@@ -43,11 +56,9 @@ const layoutLeft = css`
 
 const layoutCenter = css`
   .left {
-    padding: 0 20px 100px;
     flex: 2 1 200px;
   }
   .right {
-    padding: 0 20px 100px;
     flex: 2 1 200px;
   }
 `
@@ -74,6 +85,11 @@ const BlogNodeGardenWrapper = styled(Section)`
     color: ${Theme.colors.primaryLighter};
     margin-top: -10px;
   }
+  ${belowMobile} {
+    .right {
+      margin-top: 1.5em;
+    }
+  }
 `
 
 const BlogPostsWrapper = styled(Section)`
@@ -85,9 +101,6 @@ const BlogPostsWrapper = styled(Section)`
   min-height: 600px
   .right {
     z-index: 0;
-  }
-  .inner {
-    padding: 2% 10%;
   }
   h2 {
     color: ${Theme.colors.primaryLighter};
@@ -103,13 +116,12 @@ const IndividualPostWrapper = styled.section`
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin: 0 0 2em 0;
 
   article {
     padding: 1.75em;
     background-color: ${Theme.colors.primaryAlmostBlack};
     border-radius: 5px;
-    margin: 1.5em;
+    margin: 1em;
     width: calc(40% - 1.5em);
   }
 
@@ -126,9 +138,16 @@ const IndividualPostWrapper = styled.section`
     width: 100%;
   }
 
-  @media screen and (max-width: 1067px) {
-     article {
-      margin: 1em 1em 2em 1em;
+  ${belowTablet} {
+    article {
+      margin: 1em 0;
+      width: calc(90% - 1em);
+    }
+  }
+  
+  ${belowMobile} {
+    article {
+      margin: 1em 0;
       width: calc(90% - 1em);
     }
   }
