@@ -59,6 +59,14 @@ const weight = ({ weight }) => css`font-weight: ${Theme.weights[weight] || weigh
 
 // Components
 
+export const Hr = styled.hr`
+    height: 0.5em;
+    background-color: ${Theme.colors.primaryAlmostBlack};
+    border: none;
+    margin-top: 1em;
+    margin-bottom: 2em;
+`
+
 export const H1 = styled.h1`
   ${margin};
   ${full};

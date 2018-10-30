@@ -102,6 +102,9 @@ const BlogPostsWrapper = styled(Section)`
   .right {
     z-index: 0;
   }
+  .inner {
+    padding: 2% 10%;
+  }
   h2 {
     color: ${Theme.colors.primaryLighter};
   }

@@ -189,11 +189,11 @@ export default withSiteData(() => (
         <br />
         <H2>About</H2>
         <P>
-          Who, what, why, when? More about my journey from designer to developer and beyond.
+          Who, what, why, when? More about my journey from designer to developer and beyond. This page is in progress...
         </P>
-        <Link to="/about">
+        <Link>
           <Button color="success" burst>
-            Read More
+            Come Back Later, OK?
           </Button>
         </Link>
       </Right>

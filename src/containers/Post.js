@@ -9,8 +9,9 @@ import { angle } from 'utils/Styles'
 import Color from 'utils/Color'
 import Theme from 'utils/Theme'
 import NodeGarden from 'components/NodeGarden'
-import { H1, H2, H3, H4, H5, H6, P, Ul, Li, Img, Div, Button, Strong } from 'components/Html'
+import { Hr, H1, H2, H3, H4, H5, H6, P, Ul, Li, Img, Div, Button, Strong } from 'components/Html'
 
+const belowMobile = `@media(max-width: ${700}px)`
 
 const Left = props => <div className="left" {...props} />
 const Right = props => <div className="right" {...props} />
@@ -57,7 +58,7 @@ const layoutCenter = css`
 
 const layoutBlogContent = css`
   background: white;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   line-height: 1.6rem;
   font-weight: 400;
   color: black;
@@ -79,6 +80,11 @@ const BlogNodeGardenWrapper = styled(Section)`
   h1 {
     color: ${Theme.colors.primaryLighter};
     margin-top: -10px;
+  }
+  ${belowMobile} {
+    .right {
+      margin-top: 1.5em;
+    }
   }
 `
 
@@ -117,14 +123,14 @@ export default withRouteData(({ post }) => (
   <BlogNodeGardenWrapper>
     <NodeGarden color={Color('white').setAlpha(0.1).toString()} style={{ position: 'absolute', top: '0px', left: '0px', zIndex: -1 }}></NodeGarden>
     <Right>
-      <H3>{post.data.title}</H3>
+      <H1>{post.data.title}</H1>
       <Link to="/blog/"><H4>{'<'} Back</H4></Link>
     </Right> 
   </BlogNodeGardenWrapper>
   <BlogPostsWrapper>
     <Left>
-      <Moment format="MMMM Do, YYYY">{post.data.date}</Moment>
-      <hr />
+      <H3><Moment format="MMMM Do, YYYY">{post.data.date}</Moment></H3>
+      <Hr />
       <Img className="image" src={post.data.thumbnail} alt="" />
       <br />
       <Div className="markdown">
