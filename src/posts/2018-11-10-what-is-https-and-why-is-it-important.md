@@ -49,12 +49,12 @@ With HTTP you would have no warning that authenticity is being breached, but wit
 
 ![HTTPS: Wrong host warning ](/uploads/privacy-error.jpg)
 
- 
-
 # HTTPS - Just Enforce It!
 
-It's cheap, not difficult to set-up and won't effect response speed. 
+If you host a website or are a developer you should definitely be using and enforcing HTTPS for your sites. It's cheap, not difficult to set-up and won't effect response speed. 
 
-Furthermore the browsers will love you for it or perhaps even more importantly, if you don't use HTTPS, browsers will tell your users that your site isn't secure. Browsers are also starting to remove features for non-secure sites and allowing your site to use new technology such as service workers.
+Furthermore browsers will love you for it... or perhaps even more importantly, if you don't use HTTPS, browsers will tell your users that your site isn't secure. 
 
-Security researcher Scott Helme's post on status of HTTPS: https://scotthelme.co.uk/alexa-top-1-million-analysis-august-2018/
+Browsers are also starting to remove features for non-secure sites and allowing your site to use new technology such as service workers.
+
+In my next post we'll dive deeper in HTTPS.
