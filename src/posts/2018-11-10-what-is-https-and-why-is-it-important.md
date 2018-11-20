@@ -2,7 +2,7 @@
 layout: blog
 title: What is HTTPS and why is it important?
 date: '2018-11-10T20:42:15+13:00'
-thumbnail: /uploads/image.jpg
+thumbnail: /uploads/https.jpg
 rating: '1'
 ---
 # What is HTTPS?
