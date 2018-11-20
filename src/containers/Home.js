@@ -162,7 +162,7 @@ export default withSiteData(() => (
           I work with the team of clever and fun people at <a href="https://stp.co.nz/">Stratos Technology Partners</a> where we create software applications that make difficult problems simple.
         </P>
         <P>
-          During my spare time I battle-it-out on the table tennis court with my colleagues, perform music at festivals throughout Australisia and go on surf/kite/wakeboard trips with my family. 
+          During my spare time I battle-it-out on the table tennis court with my colleagues, write and perform electronic music at festivals throughout Australisia and hang with my amazing family. 
         </P>
       </Right>
       
